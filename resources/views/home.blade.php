@@ -11,13 +11,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">Welcome to your back office</p>
+                    <p class="mb-0">You are logged in!</p>
                 </div>
             </div>
         </div>
     </div>
 @stop
-@section('css')
-<link rel="stylesheet" href="{{asset("css/styleAdminLTE.css")}}">
-    
-@endsection

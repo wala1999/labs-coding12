@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -25,14 +24,14 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    /*
+    /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = 'RouteServiceProvider::HOME';
 
-    /*
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -41,7 +40,8 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-    /*
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -56,7 +56,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    /*
+    /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
@@ -64,13 +64,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $image=Storage::disk('public')->put('',$data['photo']);
+        if (count(User::all())==0){
+            $role = 1;
+        }else{
+            $role = 2;
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'photo' => $image,
             'password' => Hash::make($data['password']),
-            'role_id'=> 3,
+            'role_id' => $role
         ]);
     }
 }

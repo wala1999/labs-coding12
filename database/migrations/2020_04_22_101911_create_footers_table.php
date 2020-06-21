@@ -15,9 +15,9 @@ class CreateFootersTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('texte');
-            $table->string("lien");
-            $table->string('textLien');
+            $table->string('text');
+            $table->string('linkText');
+            $table->string('linkUrl');
             $table->timestamps();
         });
     }

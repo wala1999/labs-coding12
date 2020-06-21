@@ -29,7 +29,7 @@
         <div class="card">
             <div class="card-body register-card-body">
             <p class="login-box-msg">{{ __('adminlte::adminlte.register_message') }}</p>
-            <form enctype="multipart/form-data" action="{{ $register_url }}" method="post">
+            <form action="{{ $register_url }}" method="post">
                 {{ csrf_field() }}
 
                 <div class="input-group mb-3">
@@ -89,13 +89,35 @@
                         </div>
                     @endif
                 </div>
+
                 <div class="input-group mb-3">
-                    <input type="file" name="photo" class="form-control">
+                    <div class="custom-file">
+                      <input type="file"name="image" class="custom-file-input {{ $errors->has('image') ? 'is-invalid' : '' }}" id="inputGroupFile01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose an image</label>
+                    </div>
+                    @if ($errors->has('image'))
+                    <div class="invalid-feedback">
+                        <strong>{{ $errors->first('image') }}</strong>
+                    </div>
+                @endif
+                  </div>
+
+                {{-- <div class="input-group mb-3">
+                    <input type="file" name="image" class="form-control {{ $errors->has('image') ? 'is-invalid' : '' }}"
+                           >
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                            <span class="fas fa-image"></span>
                         </div>
                     </div>
+                    @if ($errors->has('image'))
+                        <div class="invalid-feedback">
+                            <strong>{{ $errors->first('image') }}</strong>
+                        </div>
+                    @endif
+                </div> --}}
+
+            
                 <button type="submit" class="btn btn-primary btn-block btn-flat">
                     {{ __('adminlte::adminlte.register') }}
                 </button>
