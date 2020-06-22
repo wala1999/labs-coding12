@@ -70,7 +70,7 @@ class TestimonialSeeder extends Seeder
             'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.',
         ]);
         DB::table('testimonials')->insert([
-            'prenom' => 'Vanessa',
+            'prenom' => 'Selena',
             'nom' => 'Smith',
             'img' => 'avatar/02.jpg',
             'role' => 'CEO',
@@ -78,11 +78,11 @@ class TestimonialSeeder extends Seeder
             'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.',
         ]);
         DB::table('testimonials')->insert([
-            'prenom' => 'Frank',
-            'nom' => 'Smith',
+            'prenom' => 'Wala',
+            'nom' => 'Smirani',
             'img' => 'avatar/03.jpg',
             'role' => 'CEO',
-            'company' => 'Company',
+            'company' => 'Molengeek',
             'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.',
         ]);
 

@@ -36,7 +36,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['email' =>'required|email']);
+
+        Mail::to(request('email'))->send(new Contact);
+
+        return redirect()->back()->with('messages','Votre message a ete bien envoye');
     }
 
     /**

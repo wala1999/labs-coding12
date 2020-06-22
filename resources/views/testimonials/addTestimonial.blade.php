@@ -6,7 +6,7 @@
 <div class="container wow fadeInUp mt-5">
     <div class="text-center mb-5 mx-5 px-5">
 
-        <h1 class="text-dark  p-3 mt-3 ">Add Testimonial </h1>
+        <h1 class="text-dark  p-3 mt-3  bg-success">Add Testimonial </h1>
         <hr class="bg-dark">
     </div>
 </div>
@@ -15,7 +15,7 @@
 @section('content')
     
 
-<div class="container mb-5">
+<div class="container mr-5">
     
     <form action="{{route('testimonial.store')}}" method="post" enctype="multipart/form-data">
         @csrf
