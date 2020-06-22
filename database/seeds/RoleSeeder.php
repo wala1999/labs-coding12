@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class RoleSeeder extends Seeder
 {
@@ -12,19 +13,54 @@ class RoleSeeder extends Seeder
     public function run()
     {
         DB::table('roles')->insert([
-            'role' => "CEO",
+            
+            'role' => 'Admin',
+            
         ]);
+        
+       
         DB::table('roles')->insert([
-            'role' => "Webmaster",
+            
+            'role' => 'Webmaster',
+            
         ]);
+        
+       
         DB::table('roles')->insert([
-            'role' => "User",
+            
+            'role' => 'CEO',
+            
         ]);
+        
+       
         DB::table('roles')->insert([
-            'role' => "Admin",
+            
+            'role' => 'Developper',
+            
         ]);
+        
+       
         DB::table('roles')->insert([
-            'role' => "Designer",
+            
+            'role' => 'Designer',
+            
         ]);
+        
+       
+        DB::table('roles')->insert([
+            
+            'role' => 'Rédacteur',
+            
+        ]);
+        
+       
+        DB::table('roles')->insert([
+            
+            'role' => 'Utilisateur',
+            
+        ]);
+        
+       
+        
     }
 }

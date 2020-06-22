@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AboutSeeder extends Seeder
 {
@@ -12,13 +13,13 @@ class AboutSeeder extends Seeder
     public function run()
     {
         DB::table('abouts')->insert([
-            'titre' => "GET IN THE LAB AND DISCOVER THE WORLD",
-
-            'texteGauche' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ullamcorper velit, eu efficitur dolor. Integer vitae venenatis sapien. Pellentesque at tortor convallis, lobortis purus eu, blandit ipsum. Nam fringilla, felis vel efficitur auctor, dolor tortor tristique enim, non aliquam odio neque vel eros. Sed eleifend venenatis velit, quis fringilla turpis pulvinar sed. Quisque vitae tellus tellus. Curabitur facilisis pretium iaculis. Suspendisse sapien augue, convallis eget scelerisque in, eleifend in magna. Curabitur rutrum vestibulum iaculis. Suspendisse potenti.",
-
-            'texteDroite' => "Donec a scelerisque augue. In scelerisque pretium arcu, sit amet maximus elit eleifend quis. Nunc maximus auctor sodales. Vivamus dapibus mauris in diam porta viverra. Sed porttitor sit amet ex vel ullamcorper. Nulla ante tortor, luctus eu posuere vel, fermentum eu tortor. Aenean sit amet dolor massa. Fusce in dui faucibus, pulvinar est eget, ultricies tellus. Curabitur et lacus in est sodales aliquet. Nam ac nisl eget elit ullamcorper mattis. Etiam nisi eros, imperdiet eget convallis non, consectetur sed dui.",
-
-            'video' => "https://www.youtube.com/watch?v=JgHfx2v9zOU&feature=emb_logo",
+            
+            'description1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequat ante ac congue. Quisque porttitor porttitor tempus. Donec maximus ipsum non ornare vporttitor porttitorestibulum. Sed libero nibh, feugiat at enim id, bibendum sollicitudin arcu',
+            'description2' => 'Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. Quisque porttitor porttitorlaoreet vel risus et luctus.',
+            'videoImg' => 'video.jpg',
+            'videoUrl' => 'https://www.youtube.com/watch?v=JgHfx2v9zOU',
+            'btnAbout' => true
+   
         ]);
     }
 }

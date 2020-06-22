@@ -14,20 +14,20 @@ class UserSeeder extends Seeder
     {
             DB::table('users')->insert([
 
-                'name' => 'Salome Yonte Montero',
-                'email' => 's.yonte.montero@gmail.com',
+                'name' => 'Wala Smirani',
+                'email' => 'wala.smirani@hotmail.com',
                 'photo' =>'team/1.jpg',
-                'password' => Hash::make('OxaBim07'),
+                'password' => Hash::make('wala.smirani@hotmail.com'),
                 'role_id' => 1,
 
             ]);
             
             DB::table('users')->insert([
 
-                'name' => 'Shannon Stoller',
-                'email' => 'lel@hotmail.com',
+                'name' => 'Elias Aboutaharan',
+                'email' => 'elias@hotmail.com',
                 'photo' =>'team/2.jpg',
-                'password' => Hash::make('lel@hotmail.com'),
+                'password' => Hash::make('elias@hotmail.com'),
                 'role_id' => 2,
 
             ]);
@@ -41,15 +41,7 @@ class UserSeeder extends Seeder
                 'role_id' => 4,
 
             ]);
-            DB::table('users')->insert([
-
-                'name' => 'Rayane Tahiri',
-                'email' => 'chieur@hotmail.com',
-                'photo' =>'team/1.jpg',
-                'password' => Hash::make('chieur@hotmail.com'),
-                'role_id' => 3,
-
-            ]);
+     
             DB::table('users')->insert([
 
                 'name' => 'Fati Dahri ',
@@ -59,23 +51,6 @@ class UserSeeder extends Seeder
                 'role_id' => 5,
 
             ]);
-            DB::table('users')->insert([
-
-                'name' => 'Noel Bakiasi',
-                'email' => 'letype@hotmail.com',
-                'photo' =>'team/3.jpg',
-                'password' => Hash::make('letype@hotmail.com'),
-                'role_id' => 3,
-
-            ]);
-            DB::table('users')->insert([
-
-                'name' => 'Zaïnab Fahem',
-                'email' => 'hulk@hotmail.com',
-                'photo' =>'team/1.jpg',
-                'password' => Hash::make('hulk@hotmail.com'),
-                'role_id' => 3,
-
-            ]);
+          
     }
 }

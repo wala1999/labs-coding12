@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,53 +13,108 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Ressources Welcome
+Route::get('/','WelcomeController@index')->name('Welcome');
+Route::resource('welcome', 'WelcomeController');
 
-Route::resource("/", "WelcomeController");
-Route::resource("/contact", "ContactController");
-Route::resource("/services", "ServiceController");
-Route::resource("/blog", "BlogController");
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
+
+Route::get('/blobPage', 'BlogPageController@index')->name('BlogPage');
+Route::get('/servicePage', 'ServicePageController@index')->name('ServicePage');
+Route::get('/contactPage', 'ContactPageController@index')->name('ContactPage');
+
+// Ressource MYPROFIL
+
+Route::resource('MyProfil', 'MyProfilController')->middleware('admin');
+
+// Admin
+
+Route::get('/admin', 'WelcomeController@admin')->name('Admin')->middleware('admin');
+
+// Ressources Users
+
+Route::resource('users', 'UserController')->middleware('admin');
+
+// Ressources Services
+
+Route::resource('service', 'ServiceController')->middleware('admin');
 
 
+// Ressources ServicePage
 
+Route::resource('servicePage', 'ServicePageController')->middleware('admin');
+
+// Ressources BlogPage
+
+Route::resource('blogPage', 'BlogPageController')->middleware('admin');
+
+// Ressources ContactPage
+
+Route::resource('contactPage', 'ContactPageController')->middleware('admin');
+
+// Ressources HomeElement
+
+Route::resource('homeElement', 'HomeElementController')->middleware('admin');
+
+// Ressources About
+
+Route::resource('about', 'AboutController')->middleware('admin');
+
+// Ressources Contact
+
+Route::resource('contact', 'ContactController')->middleware('admin');
+
+// Ressources Formulaire
+
+Route::resource('formulaire', 'FormulaireController')->middleware('admin');
+
+// Ressources Newsletter
+
+Route::resource('newsletter', 'NewsletterController')->middleware('admin');
+
+// Ressources Footer
+
+Route::resource('footer', 'FooterController')->middleware('admin');
+
+// Ressources Testimonial
+
+Route::resource('testimonial', 'TestimonialController')->middleware('admin');
+
+// Ressources Article
+
+Route::resource('article', 'ArticleController');
+
+// Ressources Tag
+
+Route::resource('tag', 'TagController');
+
+// Ressources Categorie
+
+Route::resource('categorie', 'CategorieController');
+
+// Ressources Quote
+
+Route::resource('quote', 'QuoteController');
+
+// Ressources Commentaire
+
+Route::resource('commentaire', 'CommentaireController');
+
+Route::post('/commentaire/store/{article}', 'CommentaireController@store')->name('addComment');
+
+// Search Search Article
+Route::get('/searchArticle', 'ArticleController@search')->name('searchArticle');
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth')->middleware('admin');
 
 Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
-
-
-Route::post('/save','FormController@store')->name('save');
-Route::post('/save','TestiController@store')->name('save');
-
-
-Route::get('/header', 'HeaderController@indexview')->name('header.edit');
-Route::get('/overview', 'SeeServController@index')->name('overview.edit'); 
-Route::get('/about', 'AboutController@indexview')->name('about.edit');
-Route::get('/testi', 'TestiController@indexview')->name('testi.edit');
-Route::get('/promo', 'PromoController@indexview')->name('promo.edit');
-Route::get('/contactSection', 'ContactSectionController@indexview')->name('contact.edit');
-Route::get('/footer', 'FooterController@indexview')->name('footer.edit');
-Route::get('/newsletter', 'NewsletterController@indexview');
-Route::get('/map', 'MapController@indexview')->name('map.edit'); 
-Route::get('/quote', 'QuoteController@indexview')->name('quote.edit'); 
-
-
-Route::resource("header","HeaderController");
-Route::resource("about","AboutController");
-Route::resource("testi","TestiController");
-Route::resource('team','TeamController');
-Route::resource('newsletter','NewsletterController');
-Route::resource("promo","PromoController");
-Route::resource("contactSection","ContactSectionController");
-Route::resource("footer","FooterController");
-Route::resource("seeServ","SeeServController");
-Route::resource("quote","QuoteController");
-Route::resource("blogPost","BlogPostController");
-Route::resource("commentaire","CommentaireController");
-
-
-Route::get('/search', 'BlogController@search')->name('search');
-Route::get('/searchcat/{id}', 'BlogController@searchcat')->name('searchcat');
-Route::get('/searchtag/{tag}', 'BlogController@searchtag')->name('searchtag');
-

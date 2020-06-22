@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategorieSeeder extends Seeder
 {
@@ -12,22 +13,44 @@ class CategorieSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'nom' => "voyages",
+            
+            'categorie' => 'Animaux',
+            
         ]);
         DB::table('categories')->insert([
-            'nom' => "mode",
+            
+            'categorie' => 'Art',
+            
         ]);
         DB::table('categories')->insert([
-            'nom' => "animaux",
+            
+            'categorie' => 'Paysage',
+            
         ]);
         DB::table('categories')->insert([
-            'nom' => "jeux",
+            
+            'categorie' => 'Plats',
+            
         ]);
         DB::table('categories')->insert([
-            'nom' => "paysages",
+            
+            'categorie' => 'Alimentation',
+            
         ]);
         DB::table('categories')->insert([
-            'nom' => "beauté",
+            
+            'categorie' => 'Technologie',
+            
+        ]);
+        DB::table('categories')->insert([
+            
+            'categorie' => 'Culture',
+            
+        ]);
+        DB::table('categories')->insert([
+            
+            'categorie' => 'Santé',
+            
         ]);
     }
 }

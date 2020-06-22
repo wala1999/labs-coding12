@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d51bdd4bb55b584c100fe8d86ba83f9",
+    "content-hash": "d770a28f20e81ccbd48cc99b59b72f81",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -730,16 +730,16 @@
         },
         {
             "name": "jeroennoten/laravel-adminlte",
-            "version": "v3.1.1",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
-                "reference": "c26da685dbab426162bd921a9b6813dba74b9d82"
+                "reference": "82e7a3f14a7de6e0a7bb33a1e659f87f024261a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/c26da685dbab426162bd921a9b6813dba74b9d82",
-                "reference": "c26da685dbab426162bd921a9b6813dba74b9d82",
+                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/82e7a3f14a7de6e0a7bb33a1e659f87f024261a5",
+                "reference": "82e7a3f14a7de6e0a7bb33a1e659f87f024261a5",
                 "shasum": ""
             },
             "require": {
@@ -748,6 +748,7 @@
                 "php": ">=7.2.0"
             },
             "require-dev": {
+                "orchestra/testbench": ">=4.0",
                 "phpunit/phpunit": "^8.3"
             },
             "type": "library",
@@ -780,7 +781,7 @@
                 "administrator",
                 "laravel"
             ],
-            "time": "2020-03-27T11:13:55+00:00"
+            "time": "2020-06-09T05:51:41+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1000,16 +1001,16 @@
         },
         {
             "name": "laravel/ui",
-            "version": "v2.0.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/ui.git",
-                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83"
+                "reference": "15368c5328efb7ce94f35ca750acde9b496ab1b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
-                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/15368c5328efb7ce94f35ca750acde9b496ab1b1",
+                "reference": "15368c5328efb7ce94f35ca750acde9b496ab1b1",
                 "shasum": ""
             },
             "require": {
@@ -1051,7 +1052,7 @@
                 "laravel",
                 "ui"
             ],
-            "time": "2020-03-03T20:16:46+00:00"
+            "time": "2020-04-29T15:06:45+00:00"
         },
         {
             "name": "league/commonmark",

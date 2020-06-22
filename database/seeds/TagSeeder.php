@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TagSeeder extends Seeder
 {
@@ -12,37 +13,69 @@ class TagSeeder extends Seeder
     public function run()
     {
         DB::table('tags')->insert([
-            'nom' => "bleu",
+            
+            'tag' => 'branding',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "rouge",
+            
+            'tag' => 'identity',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "vert",
+            
+            'tag' => 'video',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "orange",
+            
+            'tag' => 'design',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "violet",
+            
+            'tag' => 'inspiration',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "noir",
+            
+            'tag' => 'web design',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "blanc",
+            
+            'tag' => 'photography',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "jaune",
+            
+            'tag' => 'media',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "turquoise",
+            
+            'tag' => 'people',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "rose",
+            
+            'tag' => 'landscape',
+            
         ]);
         DB::table('tags')->insert([
-            'nom' => "gris",
+            
+            'tag' => 'animaux',
+            
+        ]);
+        DB::table('tags')->insert([
+            
+            'tag' => 'technology',
+            
+        ]);
+        DB::table('tags')->insert([
+            
+            'tag' => 'voyage',
+            
         ]);
     }
 }
