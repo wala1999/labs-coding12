@@ -32,22 +32,24 @@ class UserSeeder extends Seeder
 
             ]);
             
+       
+     
             DB::table('users')->insert([
 
-                'name' => 'Bryan Londot',
-                'email' => 'troll@hotmail.com',
-                'photo' =>'team/3.jpg',
-                'password' => Hash::make('troll@hotmail.com'),
-                'role_id' => 4,
+                'name' => 'Fati Dahri ',
+                'email' => 'fati@hotmail.com',
+                'photo' =>'team/2.jpg',
+                'password' => Hash::make('fati@hotmail.com'),
+                'role_id' => 5,
 
             ]);
      
             DB::table('users')->insert([
 
-                'name' => 'Fati Dahri ',
-                'email' => 'crepe@hotmail.com',
+                'name' => 'Jessica',
+                'email' => 'jessica@hotmail.com',
                 'photo' =>'team/2.jpg',
-                'password' => Hash::make('crepe@hotmail.com'),
+                'password' => Hash::make('jessica@hotmail.com'),
                 'role_id' => 5,
 
             ]);
